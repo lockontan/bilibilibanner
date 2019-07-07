@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tab-bar">
+    <view class="tab-bar-link" style="transform: {{transform}}"></view>
+    <view class="tab-bar-item {{barActive === 0 ? 'active' : ''}}" bindtap="moveBar" data-index="0">视频</view>
+    <view class="tab-bar-item {{barActive === 1 ? 'active' : ''}}" bindtap="moveBar" data-index="1">专栏</view>
+  </view>
+  <view class="section" style="transform: {{transformSection}}">
+    <view class="section-item">
+      <input placeholder="请输入av号或视频地址" bindinput="bindAvInput" class="input" placeholder-style="color: #313131"></input>
+      <view class="button" bindtap="avSubmit" id="aid">提取视频封面</view>
+      <view class="image-item">
+        <image wx:if="{{avImgs}}" src="{{avImgs}}" mode="widthFix" bindtap="avPreview"></image>
+      </view>
+    </view>
+    <view class="section-item">
+      <input placeholder="请输入cv号或专栏地址" bindinput="bindCvInput" class="input" placeholder-style="color: #313131"></input>
+      <div class="button" bindtap="cvSubmit" id="cid">提取专栏图片</div>
+      <view wx:for="{{cvImgs}}" wx:key="{{item}}" class="image-item">
+        <image src="{{item}}" mode="widthFix" class="image" bindtap="cvPreview" data-url="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- <swiper current="{{barActive}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item>
+      
+    </swiper-item> 
+    <swiper-item class="swiper-item">
+      
+    </swiper-item>
+  </swiper> -->
+</view>

@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class="image-wrap" scroll-y>
+    <view class="image-content">
+      <!-- <view class="top">p站Top10 - 2019/07/03</view> -->
+      <view wx:for="{{imageArr}}" wx:key="{{item}}" class="image-item">
+        <image src="{{item}}" mode="widthFix" class="image" bindtap="preview" data-url="{{item}}" lazy-load="true"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

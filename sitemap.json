@@ -1,0 +1,7 @@
+{
+  "desc": "提取b站视频封面",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}

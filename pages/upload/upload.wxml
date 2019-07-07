@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="section-item">
+      <input placeholder="文件名字" bindinput="bindFileInput" class="input" placeholder-style="color: #313131"></input>
+      <view class="button" bindtap="upload">上传</view>
+    </view>
+  </view>
+</view>

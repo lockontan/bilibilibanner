@@ -1,0 +1,14 @@
+/**app.wxss**/
+.container {
+  background: #f4f4f4;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden
+}
+
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+}
