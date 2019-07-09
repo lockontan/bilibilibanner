@@ -4,7 +4,7 @@
     <view class="image-content">
       <!-- <view class="top">p站Top10 - 2019/07/03</view> -->
       <view wx:for="{{imageArr}}" wx:key="{{item}}" class="image-item">
-        <image src="{{item}}" mode="widthFix" class="image" bindtap="preview" data-url="{{item}}" lazy-load="true"></image>
+        <image src="{{item.url_middle}}" mode="widthFix" class="image" bindtap="preview" data-item="{{item}}" lazy-load="true"></image>
       </view>
     </view>
   </scroll-view>

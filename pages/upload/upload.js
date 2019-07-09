@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
+//const app = getApp()
 
 function getLastDate() {
   const date = new Date(new Date().valueOf() - 24 * 60 * 60 * 1000)

@@ -1,6 +1,6 @@
-//index.js
-//获取应用实例
-const app = getApp()
+// index.js
+// 获取应用实例
+// const app = getApp()
 
 Component({
   pageLifetimes: {

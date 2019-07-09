@@ -11,7 +11,7 @@ Component({
         "selectedIconPath": "/assets/home-active.png"
       },
       {
-        "pagePath": "/pages/image/image",
+        "pagePath": "/pages/image/index",
         "text": "图集",
         "iconPath": "/assets/imgs.png",
         "selectedIconPath": "/assets/imgs-active.png"

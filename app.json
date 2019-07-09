@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/image/index",
     "pages/image/image",
     "pages/about/about",
     "pages/upload/upload"
@@ -18,7 +19,7 @@
         "selectedIconPath": "assets/home-active.png"
       },
       {
-        "pagePath": "pages/image/image",
+        "pagePath": "pages/image/index",
         "text": "图集",
         "iconPath": "assets/imgs.png",
         "selectedIconPath": "assets/imgs-active.png"

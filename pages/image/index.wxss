@@ -1,0 +1,60 @@
+.image-wrap {
+  overflow: auto;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-content {
+  background: #ffffff;
+  font-size: 0;
+  padding-bottom: 62px;
+  margin: 0 -1px
+}
+
+.image-item {
+  font-size: 0;
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 0 1px 1px;
+  position: relative
+}
+
+.image-item .rank {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+  font-size: 32rpx
+}
+
+.image-item .title {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  font-weight: 700;
+  width: 70%;
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+  font-size: 32rpx
+}
+
+.image-item .image {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
