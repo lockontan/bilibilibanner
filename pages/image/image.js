@@ -7,7 +7,6 @@ Page({
     wx.getStorage({
       key: 'topData',
       success: (res) => {
-        console.log(res.data.find(item => item.id == options.id))
         this.setData({
           imageArr: res.data.find(item => item.id == options.id).imgs
         })

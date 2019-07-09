@@ -14,6 +14,9 @@
       <view class="action-item" bindtap="getDesc">
         功能简介
       </view>
+      <view class="action-item" bindtap="getImgDesc">
+        图集说明
+      </view>
       <view class="action-item">
         <button open-type='contact' class="contact">反馈建议</button>
       </view>

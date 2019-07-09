@@ -14,11 +14,15 @@ Component({
         })
       }
       if (this.data.imageArr.length === 0) {
+        wx.showLoading({
+          title: '加载中',
+        })
         cloud.callFunction({
           // 云函数名称
           name: 'getUrl',
           // 传给云函数的参数
         }).then(res => {
+          wx.hideLoading()
           const data = res.result.data
           const imageArr = data.map(item => {
             item.length = item.imgs.length
@@ -46,7 +50,6 @@ Component({
     preview (e) {
       let item = e.target.dataset.item
       let imgItem = item.imgs[0]
-      console.log(item.length)
       if (item.length == 1) {
         wx.previewImage({
           current: imgItem.url_middle,
