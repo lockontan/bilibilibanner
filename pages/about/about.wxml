@@ -17,9 +17,9 @@
       <view class="action-item">
         <button open-type='contact' class="contact">反馈建议</button>
       </view>
-      <view class="action-item" wx:if="{{admin}}" bindtap="upload">
+      <!-- <view class="action-item" wx:if="{{admin}}" bindtap="upload">
         图片上传
-      </view>
+      </view> -->
     </view>
   </view>
   <!-- <view>功能简介</view>
