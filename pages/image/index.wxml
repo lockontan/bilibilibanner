@@ -3,6 +3,13 @@
   <scroll-view class="image-wrap" scroll-y>
     <view class="image-content">
       <!-- <view class="top">p站Top10 - 2019/07/03</view> -->
+      <view class="select-wrap">
+        <picker range="{{typeNameArr}}" value="{{type}}" bindchange="bindTypeChange" class="type-picker">
+          <view class="type-picker-text">
+            {{typeNameArr[type]}}
+          </view>
+        </picker>
+      </view>
       <view wx:for="{{imageArr}}" wx:key="{{item}}" class="image-item" style="height: {{imageWidth + 'px'}}">
         <image src="{{item.url_small}}" class="image" bindtap="preview" data-item="{{item}}" lazy-load="true"></image>
         <view class="rank">{{item.rank}}</view>

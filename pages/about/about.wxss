@@ -34,7 +34,7 @@
 }
 
 .header-name {
-  width: 120rpx;
+  max-width: 200rpx;
   position: absolute;
   margin: 0 auto;
   left: 0;
@@ -42,6 +42,7 @@
   top: 140rpx;
   z-index: 10;
   overflow: hidden;
+  text-align: center;
   color: #ffffff
 }
 

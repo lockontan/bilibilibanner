@@ -10,14 +10,14 @@
       <input placeholder="请输入av号或视频地址" bindinput="bindAvInput" class="input" placeholder-style="color: #313131"></input>
       <view class="button" bindtap="avSubmit" id="aid">提取视频封面</view>
       <view class="image-item">
-        <image wx:if="{{avImgs}}" src="{{avImgs}}" mode="widthFix" bindtap="avPreview"></image>
+        <image class="image" wx:if="{{avImgs}}" src="{{avImgs}}" mode="widthFix" bindtap="avPreview"></image>
       </view>
     </view>
     <view class="section-item">
       <input placeholder="请输入cv号或专栏地址" bindinput="bindCvInput" class="input" placeholder-style="color: #313131"></input>
       <div class="button" bindtap="cvSubmit" id="cid">提取专栏图片</div>
       <view wx:for="{{cvImgs}}" wx:key="{{item}}" class="image-item">
-        <image src="{{item}}" mode="widthFix" class="image" bindtap="cvPreview" data-url="{{item}}"></image>
+        <image class="image" src="{{item}}" mode="widthFix" class="image" bindtap="cvPreview" data-url="{{item}}"></image>
       </view>
     </view>
   </view>

@@ -17,14 +17,40 @@ function formatDate(dateTime) {
 exports.main = async (event, context) => {
   const currentDate = formatDate()
   const yesterday = formatDate(Date.now() - 24 * 3600 * 1000)
-  const data = await db.collection('url').where({
-    date: _.or(_.eq(formatDate(currentDate)), _.eq(yesterday))
-  }).limit(100).get()
+
+  const data = await db.collection('rank').where({
+    date: _.or(_.eq(formatDate(currentDate)), _.eq(yesterday)),
+    mode: event.mode
+  }).orderBy('rank', 'asc').limit(100).get()
+
+  if (data.data.length === 0) {
+    return data
+  }
+
   if (data.data.some(item => item.date == currentDate)) {
-    data.data = data.data.filter(item => item.date == currentDate)
-    return data
+    const rankData = data.data.filter(item => item.date == currentDate)
+    const imgData = await db.collection('img').where({
+      id: _.or(...rankData.map(item => _.eq(item.img_id)))
+    }).limit(100).get()
+    imgData.data.forEach(item => {
+      item.rank = rankData.find(option => option.img_id == item.id).rank
+    })
+    imgData.data.sort((i, j) => {
+      return i.rank - j.rank
+    })
+    return imgData
   } else {
-    data.data = data.data.filter(item => item.date == yesterday)
-    return data
+    const rankData = data.data.filter(item => item.date == yesterday)
+
+    const imgData = await db.collection('img').where({
+      id: _.or(...rankData.map(item => _.eq(item.img_id)))
+    }).limit(100).get()
+    imgData.data.forEach(item => {
+      item.rank = rankData.find(option => option.img_id == item.id).rank
+    })
+    imgData.data.sort((i, j) => {
+      return i.rank - j.rank
+    })
+    return imgData
   }
 }
