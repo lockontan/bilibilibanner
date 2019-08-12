@@ -31,7 +31,7 @@ Component({
 
     getImgDesc () {
       wx.showModal({
-        content: '展示pixiv(p站)最新排名前10的插画, 点击图片预览，左滑可查看高清原图 (有的原图可能较大，加载时间较长)',
+        content: 'pixiv(p站)最新插画排行',
         showCancel: false
       })
     },

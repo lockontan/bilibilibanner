@@ -1,10 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/image/index",
-    "pages/image/image",
-    "pages/about/about",
-    "pages/upload/upload"
+    "pages/about/about"
   ],
   "tabBar": {
     "color": "#787878",
@@ -17,12 +14,6 @@
         "text": "封面",
         "iconPath": "assets/home.png",
         "selectedIconPath": "assets/home-active.png"
-      },
-      {
-        "pagePath": "pages/image/index",
-        "text": "图集",
-        "iconPath": "assets/imgs.png",
-        "selectedIconPath": "assets/imgs-active.png"
       },
       {
         "pagePath": "pages/about/about",
@@ -39,5 +30,6 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#c43a3a"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": ["wx7cd2b70b356b893b"]
 }

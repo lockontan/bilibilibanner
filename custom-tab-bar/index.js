@@ -31,9 +31,15 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
-      wx.switchTab({
-        url: url
-      })
+      if (url == '/pages/image/index') {
+        wx.navigateToMiniProgram({
+          appId: 'wx7cd2b70b356b893b'
+        })
+      } else {
+        wx.switchTab({
+          url: url
+        })
+      }
     }
   }
 })
